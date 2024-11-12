@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:opsz@14..32&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.gradient {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( red, yellow);
+}
+
+.header {
+    display: grid;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, minmax(100px, auto));
+    background-color: #3C3468;
+    border-radius: 10px;
+}
+
+.navigation {
+    width: 100%;
+    height: 100px;
+    background-color: #27254C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+a {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 18px
+}
+
+.navigation h3 {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 40px;
+    color: white;
+}
+a.cv {
+    background-color: #564A94;
+    border: 1px solid #564A94;
+}
+
+a.contactInfo {
+    background-color: #564A94;
+    border: 1px solid #564A94;
+}
+
+a.sorcererGrade {
+    background-color: #564A94;
+    border: 1px solid #564A94;
+}
+
+.navigation img {
+    width: 100px;
+}
+
+.navigation li {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.gojo-closeup {
+    width: 450px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+    align-items: center;
+}
+
+.hero-image {
+    padding-right: 75px;
+    border-radius: 10px;
+}
+
+.hero-text {
+    padding-left: 50px;
+}
+
+.hero-text h1 {
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h3 {
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+
+}
