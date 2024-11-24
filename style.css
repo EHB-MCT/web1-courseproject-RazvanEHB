@@ -1,115 +1,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:opsz@14..32&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-.container {
-    display: grid;
-    grid-template-rows: 75px, 75px, 75px, 75px, 75px, 75px, 75px;
-    grid-template-columns: 75px,75px,75px,75px,75px,75px,75px,75px,75px,75px,75px,75px,75px,75px;
+* {
+    color: white;
+    font-family: "Fira Sans Condensed", sans-serif;
 }
-
-.navigation {
-    grid-row: span 1;
-    grid-column: span 14;
-    height: 75px;
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+body {
+    background: linear-gradient(to right, #342C59,#564A94, #342C59);
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: fit-content;
     background-color: #27254C;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
+    border: 2px solid #221E3B;
+    padding: 0 15px 0 0;
+    margin: 0 10px;
+
+    .nav-buttons,
+    label,
+    input {
+        display: none;
+    }
+}
+header nav ul li {
+    display: inline;
+
+    a {
+        border: 2px solid #221E3B;
+        background-color: #564A94;
+        padding: 8px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+}
+.navigation {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navigation span {
+    font-size: 40px;
+    font-weight: 700;
+}
+.logo,
+header img {
+    height: 75px;
 }
 
 .wrapper {
-    grid-row: span 5;
-    grid-column: span 13;
     display: grid;
-    background-color: #3C3468;
-    border-radius: 10px;
-}
-
-a {
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 8px 18px
-}
-
-.navigation h3 {
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-size: 40px;
-    color: white;
-}
-a.cv {
-    background-color: #564A94;
-    border: 2px solid #221E3B;
-}
-
-a.contactInfo {
-    background-color: #564A94;
-    border: 2px solid #221E3B;
-}
-
-a.sorcererGrade {
-    background-color: #564A94;
-    border: 2px solid #221E3B;
-}
-
-a.contactHero {
-    background-color: #342C59;
-    border: 2px solid #221E3B;
-    position: relative;
-    left: 40%;
-}
-
-.navigation img {
-    width: 100px;
-}
-
-.navigation li {
-    display: inline;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.logo {
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10px;
+    gap: 20px;
+    margin-top: 20px;
     align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    .text {
+        border: 2px solid #564A94;
+        background: linear-gradient(to bottom, #3E356B,#564A94);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+    .skillset.text,
+    .intro.text {
+        grid-column: 2/4;
+    }
+    .hero.image {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .hero.text {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    a {
+        background: linear-gradient(to bottom, #453C77,#4E4387);
+        border: 2px solid #221E3B;
+        padding: 8px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    a:hover {
+        background: linear-gradient(to top, #45B0D2,#9ED1DB);
+        border: 2px solid #68CFF2;
+    }
 }
 
-.gojo-closeup {
-    width: 450px;
-    padding-left: 100px;
-    padding-top: 50px;
+@media (min-width:1200px) {
+    .wrapper {
+        align-self: center;
+        max-width: 2000px;
+
+        .text {
+            h1 {
+                font-size: 3.5rem;
+            }
+            a,
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    }
 }
+@media (max-width:900px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    header {
+        flex-wrap: wrap;
 
-.description {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    grid-column: 1/13;
-    align-items: center;
-}
+        & > * {
+            flex: 1 0 50%;
+        }
+        nav {
+            display: none;
+        }
+        .nav {
+            display: block;
+        }
+        #header-collapsible {
+            display: none;
+        }
+        .lbl-toggle {
+            display: block;
+            position: relative;
+            width: 24px;
+            height: 20px;
+            right: 0;
+            flex: 0 0 auto;
+        }
+        .line {
+            position: absolute;
+            background-color: white;
+            width: 24px;
+            height: 2px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .line.l1 {
+            top: 0;
+            right: 0;
+        }
+        .line.l2 {
+            top: 9px;
+            right: 0;
+        }
+        .line.l3 {
+            top: 18px;
+            right: 0;
+        }
+        .toggle:checked + .lbl-toggle .line.l1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .toggle:checked + .lbl-toggle .line.l2 {
+            opacity: 0;
+        }
+        .toggle:checked + .lbl-toggle .line.l3 {
+            transform: rotate(-45deg) translate(7px, -8px);
+        }
+        .nav-buttons.collapsible-content {
+            display: none;
+        }
+        .toggle:checked + .lbl-toggle + .nav-buttons.collapsible-content {
+            display: block;
+        }
+        .nav-buttons.collapsible-content ul {
+            padding-left: 15px;
 
-.hero-image {
-    padding-right: 75px;
-    border-radius: 10px;
-}
+            li {
+                list-style-type: none;
+                border-bottom: 1px solid white;
 
-.hero-text {
-    padding-left: 50px;
-}
-
-.hero-text h1 {
-    font-family: "Fira Sans Condensed", sans-serif;
-    color: white;
-    text-align: center;
-}
-
-.hero-text h3 {
-    font-family: "Fira Sans Condensed", sans-serif;
-    color: white;
-    font-weight: 400;
-    text-align: center;
-
+                a {
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
 }
