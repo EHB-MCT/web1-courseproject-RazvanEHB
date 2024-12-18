@@ -108,6 +108,7 @@ header img {
         padding: 8px 18px;
         border-radius: 10px;
         text-decoration: none;
+        transition: 0.3s;
     }
     a:hover {
         background: linear-gradient(to top, #45B0D2,#9ED1DB);
@@ -211,7 +212,7 @@ header img {
 }
 
 
-/* EVERYTHING FROM HERE ON OUT IS FOR THE CV PAGE */
+/* EVERYTHING FROM HERE ON OUT TO THE NEXT COMMENT IS FOR THE CV PAGE */
 
 .PSimage {
     background-color: #27254C;
@@ -276,3 +277,50 @@ header img {
 .References {
     grid-column: 1/span 2;
 }
+
+
+/* EVERYTHING FROM HERE ON OUT TO THE NEXT COMMENT IS FOR THE SORCERER CERTIFICATE */
+
+.CertificateRibbon {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+}
+.CertRibbon {
+    margin: auto;
+    display: block;
+    width: 40%;
+}
+
+.CertTitle {
+    text-align: center;
+    grid-column: 2/span 1;
+    grid-row: 1/ span 1;
+}
+.CertTitle h3 {
+    font-weight: 400;
+}
+
+.JujutsuHigh {
+    grid-column: 3/span 1;
+    grid-row: 1/span 1;
+}
+.Seal {
+    margin: auto;
+    display: block;
+    width: 40%;
+}
+
+.CertInfo {
+    text-align: center;
+    grid-column: 2/3;
+}
+.CertInfo h1 {
+    font-weight: 450;
+}
+.CertInfo h2 {
+    font-weight: 400;
+}
+.CertInfo h3 {
+    font-weight: 300;
+}
+
