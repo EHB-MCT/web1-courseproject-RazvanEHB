@@ -131,6 +131,7 @@ header img {
             a,
             h3 {
                 font-size: 1.3rem;
+                font-weight: 400;
             }
         }
     }
@@ -256,7 +257,6 @@ header img {
     border-radius: 10px;
     margin-right: 15px;
 }
-
 .Skills ul li h3 {
     font-weight: 400;
 }
@@ -269,6 +269,9 @@ header img {
     border-radius: 10px;
     margin-right: 15px;
 }
+.WorkExperience h3 {
+    font-weight: 400;
+}
 
 .Education {
     grid-column: 1/span 3;
@@ -276,6 +279,9 @@ header img {
     background-color: #342C59;
     border: 2px solid #221E3B;
     border-radius: 10px;
+}
+.Education h3 {
+    font-weight: 400;
 }
 
 .Hobbies {
@@ -286,9 +292,15 @@ header img {
     border-radius: 10px;
     margin-right: 15px;
 }
+.Hobbies h3 {
+    font-weight: 400;
+}
 
 .References {
     grid-column: 1/span 2;
+}
+.References h3 {
+    font-weight: 400;
 }
 
 
@@ -350,6 +362,9 @@ header img {
 .CertContent h2 {
     font-weight: 400;
 }
+.CertContent h3 {
+    font-weight: 400;
+}
 .CertContent hr {
     max-width: 100%;
 }
@@ -357,8 +372,15 @@ header img {
 .CertWarning {
     grid-column: 1/span 3;
     grid-row: 4/4;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #342C59;
+    border-radius: 10px;
+    border: 2px solid #221E3B;
+    padding-left: 20px;
+}
+.CertWarning h2 {
+    font-weight: 400;
 }
 
 .CertClose {
@@ -371,6 +393,6 @@ header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 30%;
     float: left;
 }
